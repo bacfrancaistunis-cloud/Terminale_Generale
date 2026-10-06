@@ -44,11 +44,15 @@
             from { opacity: 0; transform: translateY(16px); }
             to { opacity: 1; transform: translateY(0); }
         }
+
         @keyframes scaleIn {
             from { opacity: 0; transform: scale(0.95); }
             to { opacity: 1; transform: scale(1); }
         }
-        @keyframes spin { to { transform: rotate(360deg); } }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
 
         /* HEADER FLOTTANT */
         header {
@@ -74,10 +78,31 @@
             box-shadow: var(--shadow);
         }
 
-        .brand { display: flex; align-items: center; gap: 14px; }
-        .logo { width: 46px; height: 46px; object-fit: contain; border-radius: 12px; }
-        .brand-text h1 { font-size: 15px; font-weight: 800; letter-spacing: -0.4px; }
-        .brand-text p { font-size: 11px; color: var(--muted); font-weight: 500; margin-top: 1px; }
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .logo {
+            width: 46px;
+            height: 46px;
+            object-fit: contain;
+            border-radius: 12px;
+        }
+
+        .brand-text h1 {
+            font-size: 15px;
+            font-weight: 800;
+            letter-spacing: -0.4px;
+        }
+
+        .brand-text p {
+            font-size: 11px;
+            color: var(--muted);
+            font-weight: 500;
+            margin-top: 1px;
+        }
 
         .level-badge {
             background: #eef2ff;
@@ -105,7 +130,10 @@
             animation: fadeUp 0.5s ease 0.08s both;
         }
 
-        .hero { flex: 1; min-width: 0; }
+        .hero {
+            flex: 1;
+            min-width: 0;
+        }
 
         .eyebrow {
             display: inline-block;
@@ -142,7 +170,7 @@
             line-height: 1.5;
         }
 
-        /* BOUTON MODERN */
+        /* BOUTON MODERNE */
         .download-btn {
             display: inline-flex;
             align-items: center;
@@ -158,7 +186,10 @@
             cursor: pointer;
             position: relative;
             box-shadow: 0 12px 28px -8px rgba(79,70,229,0.45);
-            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease,
+                background 0.2s ease;
         }
 
         .download-btn:hover {
@@ -167,33 +198,56 @@
             box-shadow: 0 18px 36px -10px rgba(79,70,229,0.5);
         }
 
-        .download-btn svg { width: 17px; height: 17px; }
-        .download-btn.is-loading { pointer-events: none; }
-        .download-btn.is-loading .btn-text { opacity: 0; }
-        .download-btn.is-success { background: #16a34a; }
-        .download-btn.is-success .btn-text { opacity: 0; }
+        .download-btn svg {
+            width: 17px;
+            height: 17px;
+        }
+
+        .download-btn.is-loading {
+            pointer-events: none;
+        }
+
+        .download-btn.is-loading .btn-text {
+            opacity: 0;
+        }
+
+        .download-btn.is-success {
+            background: #16a34a;
+        }
+
+        .download-btn.is-success .btn-text {
+            opacity: 0;
+        }
 
         .btn-spinner {
             display: none;
             position: absolute;
             inset: 0;
             margin: auto;
-            width: 18px; height: 18px;
+            width: 18px;
+            height: 18px;
             border: 2.5px solid rgba(255,255,255,0.3);
             border-top-color: #fff;
             border-radius: 50%;
             animation: spin 0.7s linear infinite;
         }
-        .download-btn.is-loading .btn-spinner { display: block; }
+
+        .download-btn.is-loading .btn-spinner {
+            display: block;
+        }
 
         .btn-check {
             display: none;
             position: absolute;
             inset: 0;
             margin: auto;
-            width: 20px; height: 20px;
+            width: 20px;
+            height: 20px;
         }
-        .download-btn.is-success .btn-check { display: block; }
+
+        .download-btn.is-success .btn-check {
+            display: block;
+        }
 
         /* NOTICE */
         .notice {
@@ -209,7 +263,8 @@
         }
 
         .notice-icon {
-            width: 38px; height: 38px;
+            width: 38px;
+            height: 38px;
             background: #fef3c7;
             color: #d97706;
             border-radius: 12px;
@@ -220,8 +275,18 @@
             flex-shrink: 0;
         }
 
-        .notice-title { font-size: 13px; font-weight: 800; color: #92400e; }
-        .notice-description { font-size: 12px; color: #b45309; margin-top: 2px; line-height: 1.4; }
+        .notice-title {
+            font-size: 13px;
+            font-weight: 800;
+            color: #92400e;
+        }
+
+        .notice-description {
+            font-size: 12px;
+            color: #b45309;
+            margin-top: 2px;
+            line-height: 1.4;
+        }
 
         /* PLANNING */
         .planning-wrapper {
@@ -254,8 +319,14 @@
             scrollbar-color: #cbd5e1 transparent;
         }
 
-        .table-scroll::-webkit-scrollbar { height: 6px; }
-        .table-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+        .table-scroll::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .table-scroll::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 3px;
+        }
 
         .schedule {
             width: 100%;
@@ -288,7 +359,9 @@
             display: block;
         }
 
-        .schedule thead th.today-header .day-full { color: var(--primary); }
+        .schedule thead th.today-header .day-full {
+            color: var(--primary);
+        }
 
         .schedule tbody th {
             width: 90px;
@@ -332,7 +405,9 @@
             margin: 0 auto;
         }
 
-        .schedule tbody td:hover:empty { background: #f1f5f9; }
+        .schedule tbody td:hover:empty {
+            background: #f1f5f9;
+        }
 
         /* BLOCS COURS */
         .course-block {
@@ -347,7 +422,9 @@
             overflow: hidden;
             border: 2px solid transparent;
             box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-            transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.22s ease;
+            transition:
+                transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1),
+                box-shadow 0.22s ease;
         }
 
         .course-block:hover {
@@ -387,35 +464,110 @@
             opacity: 0.85;
         }
 
-        /* PALETTES DE COULEURS MATIÈRES */
-        .cb-svt { background: #e0f2fe; color: #0369a1; border-color: rgba(14, 165, 233, 0.2); }
-        .cb-svt .cb-badge { color: #0284c7; }
+        /* PALETTES */
+        .cb-svt {
+            background: #e0f2fe;
+            color: #0369a1;
+            border-color: rgba(14, 165, 233, 0.2);
+        }
 
-        .cb-philo { background: #f3e8ff; color: #6b21a8; border-color: rgba(168, 85, 247, 0.2); }
-        .cb-philo .cb-badge { color: #7e22ce; }
+        .cb-svt .cb-badge {
+            color: #0284c7;
+        }
 
-        .cb-ens-sci { background: #e0e7ff; color: #3730a3; border-color: rgba(99, 102, 241, 0.2); }
-        .cb-ens-sci .cb-badge { color: #4338ca; }
+        .cb-philo {
+            background: #f3e8ff;
+            color: #6b21a8;
+            border-color: rgba(168, 85, 247, 0.2);
+        }
 
-        .cb-physique { background: #fae8ff; color: #581c87; border-color: rgba(192, 38, 211, 0.2); }
-        .cb-physique .cb-badge { color: #701a75; }
+        .cb-philo .cb-badge {
+            color: #7e22ce;
+        }
 
-        .cb-maths { background: #d1fae5; color: #065f46; border-color: rgba(16, 185, 129, 0.2); }
-        .cb-maths .cb-badge { color: #047857; }
+        .cb-ens-sci {
+            background: #e0e7ff;
+            color: #3730a3;
+            border-color: rgba(99, 102, 241, 0.2);
+        }
 
-        .cb-histoire { background: #fee2e2; color: #991b1b; border-color: rgba(239, 68, 68, 0.2); }
-        .cb-histoire .cb-badge { color: #b91c1c; }
+        .cb-ens-sci .cb-badge {
+            color: #4338ca;
+        }
 
-        .cb-francais { background: #ffedd5; color: #9a3412; border-color: rgba(249, 115, 22, 0.2); }
-        .cb-francais .cb-badge { color: #c2410c; }
+        .cb-physique {
+            background: #fae8ff;
+            color: #581c87;
+            border-color: rgba(192, 38, 211, 0.2);
+        }
 
-        .cb-anglais { background: #ffedd5; color: #9a3412; border-color: rgba(249, 115, 22, 0.2); }
-        .cb-anglais .cb-badge { color: #c2410c; }
+        .cb-physique .cb-badge {
+            color: #701a75;
+        }
 
-        .cb-msgn { background: #f1f5f9; color: #0f172a; border-color: rgba(100, 116, 139, 0.2); }
-        .cb-mercatique { background: #fce7f3; color: #9d174d; border-color: rgba(236, 72, 153, 0.2); }
-        .cb-eco-droit { background: #ccfbf1; color: #164e63; border-color: rgba(14, 116, 144, 0.2); }
-        .cb-techno { background: #f3e8ff; color: #3b0764; border-color: rgba(168, 85, 247, 0.2); }
+        .cb-maths {
+            background: #d1fae5;
+            color: #065f46;
+            border-color: rgba(16, 185, 129, 0.2);
+        }
+
+        .cb-maths .cb-badge {
+            color: #047857;
+        }
+
+        .cb-histoire {
+            background: #fee2e2;
+            color: #991b1b;
+            border-color: rgba(239, 68, 68, 0.2);
+        }
+
+        .cb-histoire .cb-badge {
+            color: #b91c1c;
+        }
+
+        .cb-francais {
+            background: #ffedd5;
+            color: #9a3412;
+            border-color: rgba(249, 115, 22, 0.2);
+        }
+
+        .cb-francais .cb-badge {
+            color: #c2410c;
+        }
+
+        .cb-anglais {
+            background: #ffedd5;
+            color: #9a3412;
+            border-color: rgba(249, 115, 22, 0.2);
+        }
+
+        .cb-anglais .cb-badge {
+            color: #c2410c;
+        }
+
+        .cb-msgn {
+            background: #f1f5f9;
+            color: #0f172a;
+            border-color: rgba(100, 116, 139, 0.2);
+        }
+
+        .cb-mercatique {
+            background: #fce7f3;
+            color: #9d174d;
+            border-color: rgba(236, 72, 153, 0.2);
+        }
+
+        .cb-eco-droit {
+            background: #ccfbf1;
+            color: #164e63;
+            border-color: rgba(14, 116, 144, 0.2);
+        }
+
+        .cb-techno {
+            background: #f3e8ff;
+            color: #3b0764;
+            border-color: rgba(168, 85, 247, 0.2);
+        }
 
         /* BADGES STATUTS */
         .status-badge {
@@ -447,7 +599,11 @@
             background: #f1f5f9 !important;
             color: #94a3b8 !important;
         }
-        .course-block.is-cancelled .cb-name { text-decoration: line-through; }
+
+        .course-block.is-cancelled .cb-name {
+            text-decoration: line-through;
+        }
+
         .course-block.is-cancelled .badge-cancelled {
             display: block;
             background: #fee2e2;
@@ -459,6 +615,7 @@
             color: #b45309 !important;
             border-color: #fde68a !important;
         }
+
         .course-block.is-postponed .badge-postponed {
             display: block;
             background: #fef3c7;
@@ -469,6 +626,7 @@
             border-color: var(--primary) !important;
             box-shadow: 0 4px 18px rgba(79,70,229,0.2);
         }
+
         .course-block.is-rattrapage .badge-rattrapage {
             display: block;
             background: var(--primary);
@@ -487,7 +645,11 @@
             border-top: 1px solid var(--border);
         }
 
-        .legend-list { display: flex; flex-wrap: wrap; gap: 10px; }
+        .legend-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
 
         .legend-tag {
             display: flex;
@@ -501,7 +663,12 @@
             color: var(--muted);
         }
 
-        .legend-dot { width: 8px; height: 8px; border-radius: 50%; }
+        .legend-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+
         .ld-svt { background: #0284c7; }
         .ld-philo { background: #9333ea; }
         .ld-ens-sci { background: #4f46e5; }
@@ -510,8 +677,14 @@
         .ld-histoire { background: #ef4444; }
         .ld-anglais { background: #ea580c; }
 
-        .total-hours { font-size: 13px; font-weight: 800; }
-        .total-hours span { color: var(--primary); }
+        .total-hours {
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        .total-hours span {
+            color: var(--primary);
+        }
 
         footer {
             text-align: center;
@@ -522,251 +695,711 @@
         }
 
         @media (max-width: 800px) {
-            .scroll-hint { display: flex; }
-            .hero-row { flex-direction: column; align-items: flex-start; }
-            .download-btn { width: 100%; justify-content: center; }
-            header { top: 10px; margin-bottom: 24px; }
-            .planning-wrapper { padding: 14px; border-radius: 22px; }
-            .schedule tbody td { height: 58px; }
+            .scroll-hint {
+                display: flex;
+            }
+
+            .hero-row {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .download-btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            header {
+                top: 10px;
+                margin-bottom: 24px;
+            }
+
+            .planning-wrapper {
+                padding: 14px;
+                border-radius: 22px;
+            }
+
+            .schedule tbody td {
+                height: 58px;
+            }
         }
 
         @media (max-width: 520px) {
-            .level-badge { display: none; }
-            .logo { width: 40px; height: 40px; }
-            .brand-text h1 { font-size: 13px; }
-            main { padding: 0 12px 50px; }
-            .hero h2 { font-size: 26px; letter-spacing: -1px; }
-            .schedule { min-width: 900px; }
+            .level-badge {
+                display: none;
+            }
+
+            .logo {
+                width: 40px;
+                height: 40px;
+            }
+
+            .brand-text h1 {
+                font-size: 13px;
+            }
+
+            main {
+                padding: 0 12px 50px;
+            }
+
+            .hero h2 {
+                font-size: 26px;
+                letter-spacing: -1px;
+            }
+
+            .schedule {
+                min-width: 900px;
+            }
         }
 
         @media print {
-            body { background: #fff !important; }
-            header { position: static; margin-bottom: 16px; }
-            .header-inner { box-shadow: none; border: none; }
-            .download-btn, .scroll-hint, .notice { display: none !important; }
-            .planning-wrapper { box-shadow: none; border: none; padding: 0; }
-            .table-scroll { overflow: visible !important; }
-            .schedule { min-width: 100% !important; }
-            @page { size: landscape; margin: 5mm; }
+            body {
+                background: #fff !important;
+            }
+
+            header {
+                position: static;
+                margin-bottom: 16px;
+            }
+
+            .header-inner {
+                box-shadow: none;
+                border: none;
+            }
+
+            .download-btn,
+            .scroll-hint,
+            .notice {
+                display: none !important;
+            }
+
+            .planning-wrapper {
+                box-shadow: none;
+                border: none;
+                padding: 0;
+            }
+
+            .table-scroll {
+                overflow: visible !important;
+            }
+
+            .schedule {
+                min-width: 100% !important;
+            }
+
+            @page {
+                size: landscape;
+                margin: 5mm;
+            }
         }
     </style>
 </head>
+
 <body>
 
 <header>
     <div class="header-inner">
         <div class="brand">
-            <img class="logo" src="https://bftunis.com/wp-content/uploads/2026/06/icon-512.png" alt="BFT">
+            <img
+                class="logo"
+                src="https://bftunis.com/wp-content/uploads/2026/06/icon-512.png"
+                alt="BFT"
+            >
+
             <div class="brand-text">
                 <h1>BFT Education Group</h1>
                 <p>Emploi du temps</p>
             </div>
         </div>
-        <div class="level-badge">Terminale Générale</div>
+
+        <div class="level-badge">
+            Terminale Générale
+        </div>
     </div>
 </header>
 
 <main>
+
     <div class="hero-row">
         <section class="hero">
-            <div class="eyebrow">Année 2026-2027</div>
-            <h2>Terminale <span>Générale</span></h2>
-            <p>Retrouvez votre emploi du temps et l'état de chaque cours en temps réel.</p>
+
+            <div class="eyebrow">
+                Année 2026-2027
+            </div>
+
+            <h2>
+                Terminale <span>Générale</span>
+            </h2>
+
+            <p>
+                Retrouvez votre emploi du temps et l'état de chaque cours en temps réel.
+            </p>
+
         </section>
 
-        <button class="download-btn" id="downloadBtn" onclick="downloadPDF()">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <button
+            class="download-btn"
+            id="downloadBtn"
+            onclick="downloadPDF()"
+        >
+            <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            >
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                 <polyline points="7 10 12 15 17 10"/>
                 <line x1="12" y1="15" x2="12" y2="3"/>
             </svg>
-            <span class="btn-text">Télécharger PDF</span>
+
+            <span class="btn-text">
+                Télécharger PDF
+            </span>
+
             <div class="btn-spinner"></div>
+
             <div class="btn-check">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <polyline points="20 6 9 17 4 12"/>
+                </svg>
             </div>
         </button>
     </div>
 
     <div class="notice">
         <div class="notice-icon">🔔</div>
+
         <div class="notice-text">
-            <div class="notice-title">Mises à jour en direct</div>
-            <div class="notice-description">Les absences, reports et rattrapages s'affichent automatiquement. Vérifiez avant de vous déplacer.</div>
+            <div class="notice-title">
+                Mises à jour en direct
+            </div>
+
+            <div class="notice-description">
+                Les absences, reports et rattrapages s'affichent automatiquement.
+                Vérifiez avant de vous déplacer.
+            </div>
         </div>
     </div>
 
-    <section class="planning-wrapper" id="planningSection">
+    <section
+        class="planning-wrapper"
+        id="planningSection"
+    >
+
         <div class="scroll-hint">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+            <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+            >
+                <polyline points="9 18 15 12 9 6"/>
+            </svg>
+
             Glissez pour voir toute la semaine
         </div>
 
         <div class="table-scroll">
-            <table class="schedule" id="timetable">
+
+            <table
+                class="schedule"
+                id="timetable"
+            >
+
                 <thead>
                     <tr>
-                        <th><span class="day-sub">Heure</span></th>
-                        <th data-day="1"><span class="day-full">Lundi</span></th>
-                        <th data-day="2"><span class="day-full">Mardi</span></th>
-                        <th data-day="3"><span class="day-full">Mercredi</span></th>
-                        <th data-day="4"><span class="day-full">Jeudi</span></th>
-                        <th data-day="5"><span class="day-full">Vendredi</span></th>
-                        <th data-day="6"><span class="day-full">Samedi</span></th>
-                        <th data-day="0"><span class="day-full">Dimanche</span></th>
+                        <th>
+                            <span class="day-sub">
+                                Heure
+                            </span>
+                        </th>
+
+                        <th data-day="1">
+                            <span class="day-full">Lundi</span>
+                        </th>
+
+                        <th data-day="2">
+                            <span class="day-full">Mardi</span>
+                        </th>
+
+                        <th data-day="3">
+                            <span class="day-full">Mercredi</span>
+                        </th>
+
+                        <th data-day="4">
+                            <span class="day-full">Jeudi</span>
+                        </th>
+
+                        <th data-day="5">
+                            <span class="day-full">Vendredi</span>
+                        </th>
+
+                        <th data-day="6">
+                            <span class="day-full">Samedi</span>
+                        </th>
+
+                        <th data-day="0">
+                            <span class="day-full">Dimanche</span>
+                        </th>
                     </tr>
                 </thead>
+
                 <tbody>
+
                     <!-- 09h -->
                     <tr>
-                        <th><span class="time-main">09h00</span><span class="time-end">10h00</span></th>
-                        <td data-day="1"></td><td data-day="2"></td><td data-day="3"></td><td data-day="4"></td><td data-day="5"></td><td data-day="6"></td><td data-day="0"></td>
-                    </tr>
-                    <!-- 10h -->
-                    <tr>
-                        <th><span class="time-main">10h00</span><span class="time-end">11h00</span></th>
-                        <td data-day="1"></td><td data-day="2"></td><td data-day="3"></td><td data-day="4"></td><td data-day="5"></td><td data-day="6"></td><td data-day="0"></td>
-                    </tr>
-                    <!-- 11h -->
-                    <tr>
-                        <th><span class="time-main">11h00</span><span class="time-end">12h00</span></th>
-                        <td data-day="1"></td><td data-day="2"></td><td data-day="3"></td><td data-day="4"></td><td data-day="5"></td><td data-day="6"></td><td data-day="0"></td>
-                    </tr>
-                    <!-- 12h -->
-                    <tr>
-                        <th><span class="time-main">12h00</span><span class="time-end">13h00</span></th>
-                        <td data-day="1"></td><td data-day="2"></td><td data-day="3"></td><td data-day="4"></td><td data-day="5"></td><td data-day="6"></td><td data-day="0"></td>
-                    </tr>
-                    <!-- 13h -->
-                    <tr>
-                        <th><span class="time-main">13h00</span><span class="time-end">14h00</span></th>
-                        <td data-day="1"></td><td data-day="2"></td><td data-day="3"></td><td data-day="4"></td><td data-day="5"></td><td data-day="6"></td><td data-day="0"></td>
-                    </tr>
-                    <!-- 14h — Histoire Géographie (Dimanche 14h-16h) -->
-                    <tr>
-                        <th><span class="time-main">14h00</span><span class="time-end">15h00</span></th>
-                        <td data-day="1"></td><td data-day="2"></td><td data-day="3"></td><td data-day="4"></td><td data-day="5"></td><td data-day="6"></td>
-                        <td data-day="0" rowspan="2">
-                            <div class="course-block cb-histoire" data-course-id="histoire">
-                                <span class="status-badge badge-cancelled">Annulé</span>
-                                <span class="status-badge badge-postponed">Reporté</span>
-                                <span class="cb-name">Histoire Géographie</span>
-                                <div class="cb-details">
-                                    <span class="cb-badge">2h</span>
-                                    <span class="cb-time">14h – 16h</span>
-                                </div>
-                                <div class="cb-custom-note"></div>
-                            </div>
-                        </td>
-                    </tr>
-                    <!-- 15h — Spécialité Physique Chimie (Samedi 15h-17h) -->
-                    <tr>
-                        <th><span class="time-main">15h00</span><span class="time-end">16h00</span></th>
-                        <td data-day="1"></td><td data-day="2"></td><td data-day="3"></td><td data-day="4"></td><td data-day="5"></td>
-                        <td data-day="6" rowspan="2">
-                            <div class="course-block cb-physique" data-course-id="physique">
-                                <span class="status-badge badge-cancelled">Annulé</span>
-                                <span class="status-badge badge-postponed">Reporté</span>
-                                <span class="cb-name">Spécialité Physique Chimie</span>
-                                <div class="cb-details">
-                                    <span class="cb-badge">2h</span>
-                                    <span class="cb-time">15h – 17h</span>
-                                </div>
-                                <div class="cb-custom-note"></div>
-                            </div>
-                        </td>
-                    </tr>
-                    <!-- 16h -->
-                    <tr>
-                        <th><span class="time-main">16h00</span><span class="time-end">17h00</span></th>
-                        <td data-day="1"></td><td data-day="2"></td><td data-day="3"></td><td data-day="4"></td><td data-day="5"></td><td data-day="0"></td>
-                    </tr>
-                    <!-- 17h — Spécialité Mathématiques (Samedi 17h-19h) -->
-                    <tr>
-                        <th><span class="time-main">17h00</span><span class="time-end">18h00</span></th>
-                        <td data-day="1"></td><td data-day="2"></td><td data-day="3"></td><td data-day="4"></td><td data-day="5"></td>
-                        <td data-day="6" rowspan="2">
-                            <div class="course-block cb-maths" data-course-id="maths">
-                                <span class="status-badge badge-cancelled">Annulé</span>
-                                <span class="status-badge badge-postponed">Reporté</span>
-                                <span class="cb-name">Spécialité Mathématiques</span>
-                                <div class="cb-details">
-                                    <span class="cb-badge">2h</span>
-                                    <span class="cb-time">17h – 19h</span>
-                                </div>
-                                <div class="cb-custom-note"></div>
-                            </div>
-                        </td>
+                        <th>
+                            <span class="time-main">09h00</span>
+                            <span class="time-end">10h00</span>
+                        </th>
+
+                        <td data-day="1"></td>
+                        <td data-day="2"></td>
+                        <td data-day="3"></td>
+                        <td data-day="4"></td>
+                        <td data-day="5"></td>
+                        <td data-day="6"></td>
                         <td data-day="0"></td>
                     </tr>
+
+                    <!-- 10h -->
+                    <tr>
+                        <th>
+                            <span class="time-main">10h00</span>
+                            <span class="time-end">11h00</span>
+                        </th>
+
+                        <td data-day="1"></td>
+                        <td data-day="2"></td>
+                        <td data-day="3"></td>
+                        <td data-day="4"></td>
+                        <td data-day="5"></td>
+                        <td data-day="6"></td>
+                        <td data-day="0"></td>
+                    </tr>
+
+                    <!-- 11h -->
+                    <tr>
+                        <th>
+                            <span class="time-main">11h00</span>
+                            <span class="time-end">12h00</span>
+                        </th>
+
+                        <td data-day="1"></td>
+                        <td data-day="2"></td>
+                        <td data-day="3"></td>
+                        <td data-day="4"></td>
+                        <td data-day="5"></td>
+                        <td data-day="6"></td>
+                        <td data-day="0"></td>
+                    </tr>
+
+                    <!-- 12h -->
+                    <tr>
+                        <th>
+                            <span class="time-main">12h00</span>
+                            <span class="time-end">13h00</span>
+                        </th>
+
+                        <td data-day="1"></td>
+                        <td data-day="2"></td>
+                        <td data-day="3"></td>
+                        <td data-day="4"></td>
+                        <td data-day="5"></td>
+                        <td data-day="6"></td>
+                        <td data-day="0"></td>
+                    </tr>
+
+                    <!-- 13h -->
+                    <tr>
+                        <th>
+                            <span class="time-main">13h00</span>
+                            <span class="time-end">14h00</span>
+                        </th>
+
+                        <td data-day="1"></td>
+                        <td data-day="2"></td>
+                        <td data-day="3"></td>
+                        <td data-day="4"></td>
+                        <td data-day="5"></td>
+                        <td data-day="6"></td>
+                        <td data-day="0"></td>
+                    </tr>
+
+                    <!-- 14h — Histoire Géographie (Dimanche 14h-16h) -->
+                    <tr>
+                        <th>
+                            <span class="time-main">14h00</span>
+                            <span class="time-end">15h00</span>
+                        </th>
+
+                        <td data-day="1"></td>
+                        <td data-day="2"></td>
+                        <td data-day="3"></td>
+                        <td data-day="4"></td>
+                        <td data-day="5"></td>
+                        <td data-day="6"></td>
+
+                        <td
+                            data-day="0"
+                            rowspan="2"
+                        >
+                            <div
+                                class="course-block cb-histoire"
+                                data-course-id="histoire"
+                            >
+                                <span class="status-badge badge-cancelled">
+                                    Annulé
+                                </span>
+
+                                <span class="status-badge badge-postponed">
+                                    Reporté
+                                </span>
+
+                                <span class="cb-name">
+                                    Histoire Géographie
+                                </span>
+
+                                <div class="cb-details">
+                                    <span class="cb-badge">
+                                        2h
+                                    </span>
+
+                                    <span class="cb-time">
+                                        14h – 16h
+                                    </span>
+                                </div>
+
+                                <div class="cb-custom-note"></div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- 15h — MATHÉMATIQUES (Samedi 15h-17h) -->
+                    <tr>
+                        <th>
+                            <span class="time-main">15h00</span>
+                            <span class="time-end">16h00</span>
+                        </th>
+
+                        <td data-day="1"></td>
+                        <td data-day="2"></td>
+                        <td data-day="3"></td>
+                        <td data-day="4"></td>
+                        <td data-day="5"></td>
+
+                        <!-- SÉANCE INVERSÉE : MATHS À 15h -->
+                        <td
+                            data-day="6"
+                            rowspan="2"
+                        >
+                            <div
+                                class="course-block cb-maths"
+                                data-course-id="maths"
+                            >
+                                <span class="status-badge badge-cancelled">
+                                    Annulé
+                                </span>
+
+                                <span class="status-badge badge-postponed">
+                                    Reporté
+                                </span>
+
+                                <span class="cb-name">
+                                    Spécialité Mathématiques
+                                </span>
+
+                                <div class="cb-details">
+                                    <span class="cb-badge">
+                                        2h
+                                    </span>
+
+                                    <span class="cb-time">
+                                        15h – 17h
+                                    </span>
+                                </div>
+
+                                <div class="cb-custom-note"></div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- 16h -->
+                    <tr>
+                        <th>
+                            <span class="time-main">16h00</span>
+                            <span class="time-end">17h00</span>
+                        </th>
+
+                        <td data-day="1"></td>
+                        <td data-day="2"></td>
+                        <td data-day="3"></td>
+                        <td data-day="4"></td>
+                        <td data-day="5"></td>
+                        <td data-day="0"></td>
+                    </tr>
+
+                    <!-- 17h — PHYSIQUE CHIMIE (Samedi 17h-19h) -->
+                    <tr>
+                        <th>
+                            <span class="time-main">17h00</span>
+                            <span class="time-end">18h00</span>
+                        </th>
+
+                        <td data-day="1"></td>
+                        <td data-day="2"></td>
+                        <td data-day="3"></td>
+                        <td data-day="4"></td>
+                        <td data-day="5"></td>
+
+                        <!-- SÉANCE INVERSÉE : PHYSIQUE À 17h -->
+                        <td
+                            data-day="6"
+                            rowspan="2"
+                        >
+                            <div
+                                class="course-block cb-physique"
+                                data-course-id="physique"
+                            >
+                                <span class="status-badge badge-cancelled">
+                                    Annulé
+                                </span>
+
+                                <span class="status-badge badge-postponed">
+                                    Reporté
+                                </span>
+
+                                <span class="cb-name">
+                                    Spécialité Physique Chimie
+                                </span>
+
+                                <div class="cb-details">
+                                    <span class="cb-badge">
+                                        2h
+                                    </span>
+
+                                    <span class="cb-time">
+                                        17h – 19h
+                                    </span>
+                                </div>
+
+                                <div class="cb-custom-note"></div>
+                            </div>
+                        </td>
+
+                        <td data-day="0"></td>
+                    </tr>
+
                     <!-- 18h -->
                     <tr>
-                        <th><span class="time-main">18h00</span><span class="time-end">19h00</span></th>
-                        <td data-day="1"></td><td data-day="2"></td><td data-day="3"></td><td data-day="4"></td><td data-day="5"></td><td data-day="0"></td>
+                        <th>
+                            <span class="time-main">18h00</span>
+                            <span class="time-end">19h00</span>
+                        </th>
+
+                        <td data-day="1"></td>
+                        <td data-day="2"></td>
+                        <td data-day="3"></td>
+                        <td data-day="4"></td>
+                        <td data-day="5"></td>
+                        <td data-day="0"></td>
                     </tr>
-                    <!-- 19h — SVT (Lun) / Philo (Mar) / Ens. Sci (Mer) -->
+
+                    <!-- 19h — SVT / Philo / Ens. Sci -->
                     <tr>
-                        <th><span class="time-main">19h00</span><span class="time-end">20h00</span></th>
-                        <td data-day="1" rowspan="2">
-                            <div class="course-block cb-svt" data-course-id="svt">
-                                <span class="status-badge badge-cancelled">Annulé</span>
-                                <span class="status-badge badge-postponed">Reporté</span>
-                                <span class="cb-name">Spécialité SVT</span>
+                        <th>
+                            <span class="time-main">19h00</span>
+                            <span class="time-end">20h00</span>
+                        </th>
+
+                        <td
+                            data-day="1"
+                            rowspan="2"
+                        >
+                            <div
+                                class="course-block cb-svt"
+                                data-course-id="svt"
+                            >
+                                <span class="status-badge badge-cancelled">
+                                    Annulé
+                                </span>
+
+                                <span class="status-badge badge-postponed">
+                                    Reporté
+                                </span>
+
+                                <span class="cb-name">
+                                    Spécialité SVT
+                                </span>
+
                                 <div class="cb-details">
-                                    <span class="cb-badge">2h</span>
-                                    <span class="cb-time">19h – 21h</span>
+                                    <span class="cb-badge">
+                                        2h
+                                    </span>
+
+                                    <span class="cb-time">
+                                        19h – 21h
+                                    </span>
                                 </div>
+
                                 <div class="cb-custom-note"></div>
                             </div>
                         </td>
-                        <td data-day="2" rowspan="2">
-                            <div class="course-block cb-philo" data-course-id="philo">
-                                <span class="status-badge badge-cancelled">Annulé</span>
-                                <span class="status-badge badge-postponed">Reporté</span>
-                                <span class="cb-name">Philosophie</span>
+
+                        <td
+                            data-day="2"
+                            rowspan="2"
+                        >
+                            <div
+                                class="course-block cb-philo"
+                                data-course-id="philo"
+                            >
+                                <span class="status-badge badge-cancelled">
+                                    Annulé
+                                </span>
+
+                                <span class="status-badge badge-postponed">
+                                    Reporté
+                                </span>
+
+                                <span class="cb-name">
+                                    Philosophie
+                                </span>
+
                                 <div class="cb-details">
-                                    <span class="cb-badge">2h</span>
-                                    <span class="cb-time">19h – 21h</span>
+                                    <span class="cb-badge">
+                                        2h
+                                    </span>
+
+                                    <span class="cb-time">
+                                        19h – 21h
+                                    </span>
                                 </div>
+
                                 <div class="cb-custom-note"></div>
                             </div>
                         </td>
-                        <td data-day="3" rowspan="2">
-                            <div class="course-block cb-ens-sci" data-course-id="ens-sci">
-                                <span class="status-badge badge-cancelled">Annulé</span>
-                                <span class="status-badge badge-postponed">Reporté</span>
-                                <span class="cb-name">Enseignement Scientifique</span>
+
+                        <td
+                            data-day="3"
+                            rowspan="2"
+                        >
+                            <div
+                                class="course-block cb-ens-sci"
+                                data-course-id="ens-sci"
+                            >
+                                <span class="status-badge badge-cancelled">
+                                    Annulé
+                                </span>
+
+                                <span class="status-badge badge-postponed">
+                                    Reporté
+                                </span>
+
+                                <span class="cb-name">
+                                    Enseignement Scientifique
+                                </span>
+
                                 <div class="cb-details">
-                                    <span class="cb-badge">2h</span>
-                                    <span class="cb-time">19h – 21h</span>
+                                    <span class="cb-badge">
+                                        2h
+                                    </span>
+
+                                    <span class="cb-time">
+                                        19h – 21h
+                                    </span>
                                 </div>
+
                                 <div class="cb-custom-note"></div>
                             </div>
                         </td>
-                        <td data-day="4"></td><td data-day="5"></td><td data-day="6"></td><td data-day="0"></td>
+
+                        <td data-day="4"></td>
+                        <td data-day="5"></td>
+                        <td data-day="6"></td>
+                        <td data-day="0"></td>
                     </tr>
+
                     <!-- 20h -->
                     <tr>
-                        <th><span class="time-main">20h00</span><span class="time-end">21h00</span></th>
-                        <td data-day="4"></td><td data-day="5"></td><td data-day="6"></td><td data-day="0"></td>
+                        <th>
+                            <span class="time-main">20h00</span>
+                            <span class="time-end">21h00</span>
+                        </th>
+
+                        <td data-day="4"></td>
+                        <td data-day="5"></td>
+                        <td data-day="6"></td>
+                        <td data-day="0"></td>
                     </tr>
+
                 </tbody>
             </table>
         </div>
 
         <div class="legend-area">
+
             <div class="legend-list">
-                <div class="legend-tag"><span class="legend-dot ld-svt"></span>Spécialité SVT</div>
-                <div class="legend-tag"><span class="legend-dot ld-philo"></span>Philosophie</div>
-                <div class="legend-tag"><span class="legend-dot ld-ens-sci"></span>Ens. Scientifique</div>
-                <div class="legend-tag"><span class="legend-dot ld-physique"></span>Physique Chimie</div>
-                <div class="legend-tag"><span class="legend-dot ld-maths"></span>Mathématiques</div>
-                <div class="legend-tag"><span class="legend-dot ld-histoire"></span>Histoire Géographie</div>
-                <div class="legend-tag"><span class="legend-dot ld-anglais"></span>Anglais</div>
+
+                <div class="legend-tag">
+                    <span class="legend-dot ld-svt"></span>
+                    Spécialité SVT
+                </div>
+
+                <div class="legend-tag">
+                    <span class="legend-dot ld-philo"></span>
+                    Philosophie
+                </div>
+
+                <div class="legend-tag">
+                    <span class="legend-dot ld-ens-sci"></span>
+                    Ens. Scientifique
+                </div>
+
+                <div class="legend-tag">
+                    <span class="legend-dot ld-physique"></span>
+                    Physique Chimie
+                </div>
+
+                <div class="legend-tag">
+                    <span class="legend-dot ld-maths"></span>
+                    Mathématiques
+                </div>
+
+                <div class="legend-tag">
+                    <span class="legend-dot ld-histoire"></span>
+                    Histoire Géographie
+                </div>
+
+                <div class="legend-tag">
+                    <span class="legend-dot ld-anglais"></span>
+                    Anglais
+                </div>
+
             </div>
-            <div class="total-hours">Volume : <span>12 h / semaine</span></div>
+
+            <div class="total-hours">
+                Volume :
+                <span>12 h / semaine</span>
+            </div>
+
         </div>
+
     </section>
+
 </main>
 
 <footer>
@@ -774,254 +1407,791 @@
 </footer>
 
 <script>
+
     // =========================================================
     // GOOGLE SHEETS — Terminale Générale
     // =========================================================
-    const GOOGLE_SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRlhZH8-HZduOPsbbmHVYtbeVaJwPVmijJkxRWsjhix5I7UwBH4-lWOTuJn3VvBQVIN4yEOIPqDCPDJ/pub?gid=1961795058&single=true&output=csv";
+
+    const GOOGLE_SHEET_CSV_URL =
+        "https://docs.google.com/spreadsheets/d/e/2PACX-1vRlhZH8-HZduOPsbbmHVYtbeVaJwPVmijJkxRWsjhix5I7UwBH4-lWOTuJn3VvBQVIN4yEOIPqDCPDJ/pub?gid=1961795058&single=true&output=csv";
+
     const CURRENT_LEVEL = "terminale_generale";
 
-    const DAY_MAP = { lundi: 1, mardi: 2, mercredi: 3, jeudi: 4, vendredi: 5, samedi: 6, dimanche: 0 };
-
-    const HOUR_ROW_MAP = {
-        '9h': 1, '09h': 1, '9h00': 1, '09h00': 1, '9': 1, '09': 1,
-        '10h': 2, '10h00': 2, '10': 2,
-        '11h': 3, '11h00': 3, '11': 3,
-        '12h': 4, '12h00': 4, '12': 4,
-        '13h': 5, '13h00': 5, '13': 5,
-        '14h': 6, '14h00': 6, '14': 6,
-        '15h': 7, '15h00': 7, '15': 7,
-        '16h': 8, '16h00': 8, '16': 8,
-        '17h': 9, '17h00': 9, '17': 9,
-        '18h': 10, '18h00': 10, '18': 10,
-        '19h': 11, '19h00': 11, '19': 11,
-        '20h': 12, '20h00': 12, '20': 12
+    const DAY_MAP = {
+        lundi: 1,
+        mardi: 2,
+        mercredi: 3,
+        jeudi: 4,
+        vendredi: 5,
+        samedi: 6,
+        dimanche: 0
     };
 
-    const today = new Date().getDay();
-    document.querySelectorAll('#timetable th[data-day]').forEach(el => {
-        if (parseInt(el.dataset.day) === today) el.classList.add('today-header');
-    });
+    const HOUR_ROW_MAP = {
+        '9h': 1,
+        '09h': 1,
+        '9h00': 1,
+        '09h00': 1,
+        '9': 1,
+        '09': 1,
 
-    // Placement dynamique d'une carte (Rattrapage / Cours supplémentaire / Anglais)
-    function placeDynamicCourseBlock(courseId, subjectName, dayName, hourStart, status, noteText) {
-        const dayNum = DAY_MAP[dayName.toLowerCase().trim()];
-        let h = hourStart.toLowerCase().trim().replace(/\s/g, '');
+        '10h': 2,
+        '10h00': 2,
+        '10': 2,
+
+        '11h': 3,
+        '11h00': 3,
+        '11': 3,
+
+        '12h': 4,
+        '12h00': 4,
+        '12': 4,
+
+        '13h': 5,
+        '13h00': 5,
+        '13': 5,
+
+        '14h': 6,
+        '14h00': 6,
+        '14': 6,
+
+        '15h': 7,
+        '15h00': 7,
+        '15': 7,
+
+        '16h': 8,
+        '16h00': 8,
+        '16': 8,
+
+        '17h': 9,
+        '17h00': 9,
+        '17': 9,
+
+        '18h': 10,
+        '18h00': 10,
+        '18': 10,
+
+        '19h': 11,
+        '19h00': 11,
+        '19': 11,
+
+        '20h': 12,
+        '20h00': 12,
+        '20': 12
+    };
+
+    // =========================================================
+    // JOUR ACTUEL
+    // =========================================================
+
+    const today = new Date().getDay();
+
+    document
+        .querySelectorAll('#timetable th[data-day]')
+        .forEach(el => {
+
+            if (parseInt(el.dataset.day) === today) {
+                el.classList.add('today-header');
+            }
+
+        });
+
+    // =========================================================
+    // PLACEMENT DYNAMIQUE
+    // =========================================================
+
+    function placeDynamicCourseBlock(
+        courseId,
+        subjectName,
+        dayName,
+        hourStart,
+        status,
+        noteText
+    ) {
+
+        const dayNum =
+            DAY_MAP[dayName.toLowerCase().trim()];
+
+        let h =
+            hourStart
+                .toLowerCase()
+                .trim()
+                .replace(/\s/g, '');
+
         const rowIndex = HOUR_ROW_MAP[h];
 
         if (dayNum === undefined || !rowIndex) {
-            console.warn('Créneau non trouvé:', dayName, hourStart);
+
+            console.warn(
+                'Créneau non trouvé:',
+                dayName,
+                hourStart
+            );
+
             return;
         }
 
-        const tbody = document.querySelector('#timetable tbody');
-        const rows = tbody.querySelectorAll('tr');
-        const targetRow = rows[rowIndex - 1];
+        const tbody =
+            document.querySelector('#timetable tbody');
+
+        const rows =
+            tbody.querySelectorAll('tr');
+
+        const targetRow =
+            rows[rowIndex - 1];
+
         if (!targetRow) return;
 
-        const targetCell = targetRow.querySelector(`td[data-day="${dayNum}"]`);
+        const targetCell =
+            targetRow.querySelector(
+                `td[data-day="${dayNum}"]`
+            );
+
         if (!targetCell) return;
 
-        // Fusion automatique sur 2h (rowspan=2)
+        // Fusion automatique sur 2h
+
         if (rowIndex < rows.length) {
-            const nextRow = rows[rowIndex];
+
+            const nextRow =
+                rows[rowIndex];
+
             if (nextRow) {
-                const nextCell = nextRow.querySelector(`td[data-day="${dayNum}"]`);
+
+                const nextCell =
+                    nextRow.querySelector(
+                        `td[data-day="${dayNum}"]`
+                    );
+
                 if (nextCell) {
+
                     nextCell.style.display = 'none';
                     nextCell.innerHTML = '';
+
                 }
             }
-            targetCell.setAttribute('rowspan', '2');
+
+            targetCell.setAttribute(
+                'rowspan',
+                '2'
+            );
         }
 
-        let cbClass = 'cb-' + courseId;
-        let startHInt = parseInt(hourStart);
-        let endHInt = startHInt + 2;
+        let cbClass =
+            'cb-' + courseId;
+
+        let startHInt =
+            parseInt(hourStart);
+
+        let endHInt =
+            startHInt + 2;
 
         let badgeHtml = '';
         let statusClass = '';
 
-        if (status.includes('rattrap') || status.includes('suppl')) {
-            badgeHtml = '<span class="status-badge badge-rattrapage" style="display:block">★ RATTRAPAGE</span>';
-            statusClass = 'is-rattrapage';
-        } else if (status.includes('annul') || status.includes('cancel')) {
-            badgeHtml = '<span class="status-badge badge-cancelled" style="display:block">ANNULÉ</span>';
-            statusClass = 'is-cancelled';
-        } else if (status.includes('report') || status.includes('postpon')) {
-            badgeHtml = '<span class="status-badge badge-postponed" style="display:block">REPORTÉ</span>';
-            statusClass = 'is-postponed';
-        } else if (noteText && noteText.toLowerCase().includes('exceptionn')) {
-            badgeHtml = '<span class="status-badge badge-rattrapage" style="display:block; background:#ea580c; color:#fff;">★ EXCEPTIONNEL</span>';
+        if (
+            status.includes('rattrap') ||
+            status.includes('suppl')
+        ) {
+
+            badgeHtml =
+                '<span class="status-badge badge-rattrapage" style="display:block">★ RATTRAPAGE</span>';
+
+            statusClass =
+                'is-rattrapage';
+
+        } else if (
+            status.includes('annul') ||
+            status.includes('cancel')
+        ) {
+
+            badgeHtml =
+                '<span class="status-badge badge-cancelled" style="display:block">ANNULÉ</span>';
+
+            statusClass =
+                'is-cancelled';
+
+        } else if (
+            status.includes('report') ||
+            status.includes('postpon')
+        ) {
+
+            badgeHtml =
+                '<span class="status-badge badge-postponed" style="display:block">REPORTÉ</span>';
+
+            statusClass =
+                'is-postponed';
+
+        } else if (
+            noteText &&
+            noteText.toLowerCase().includes('exceptionn')
+        ) {
+
+            badgeHtml =
+                '<span class="status-badge badge-rattrapage" style="display:block; background:#ea580c; color:#fff;">★ EXCEPTIONNEL</span>';
         }
 
         targetCell.innerHTML = `
-            <div class="course-block ${cbClass} ${statusClass}" data-course-id="${courseId}-dynamic">
+
+            <div
+                class="course-block ${cbClass} ${statusClass}"
+                data-course-id="${courseId}-dynamic"
+            >
+
                 ${badgeHtml}
-                <span class="cb-name">${subjectName}</span>
+
+                <span class="cb-name">
+                    ${subjectName}
+                </span>
+
                 <div class="cb-details">
-                    <span class="cb-badge">2h</span>
-                    <span class="cb-time">${startHInt}h – ${endHInt}h</span>
+
+                    <span class="cb-badge">
+                        2h
+                    </span>
+
+                    <span class="cb-time">
+                        ${startHInt}h – ${endHInt}h
+                    </span>
+
                 </div>
-                ${noteText ? `<div class="cb-custom-note" style="display:block">📌 ${noteText}</div>` : ''}
+
+                ${
+                    noteText
+                    ? `<div class="cb-custom-note" style="display:block">
+                        📌 ${noteText}
+                       </div>`
+                    : ''
+                }
+
             </div>
         `;
     }
 
-    // Synchro Google Sheets
+    // =========================================================
+    // SYNCHRO GOOGLE SHEETS
+    // =========================================================
+
     async function fetchGoogleSheetsStatuses() {
+
         if (!GOOGLE_SHEET_CSV_URL) return;
 
         try {
-            const res = await fetch(GOOGLE_SHEET_CSV_URL + (GOOGLE_SHEET_CSV_URL.includes('?') ? '&' : '?') + 't=' + Date.now());
+
+            const res = await fetch(
+                GOOGLE_SHEET_CSV_URL +
+                (
+                    GOOGLE_SHEET_CSV_URL.includes('?')
+                        ? '&'
+                        : '?'
+                ) +
+                't=' +
+                Date.now()
+            );
+
             if (!res.ok) return;
 
-            const text = await res.text();
-            const lines = text.split(/\r?\n/).slice(1);
+            const text =
+                await res.text();
+
+            const lines =
+                text
+                    .split(/\r?\n/)
+                    .slice(1);
 
             lines.forEach(line => {
+
                 if (!line.trim()) return;
-                const cols = line.split(/,(?=(?:[^"]*"[^"]*")*[^"]*$)/).map(c => c.replace(/^"|"$/g, '').trim());
+
+                const cols =
+                    line
+                        .split(
+                            /,(?=(?:[^"]*"[^"]*")*[^"]*$)/
+                        )
+                        .map(
+                            c =>
+                                c
+                                    .replace(/^"|"$/g, '')
+                                    .trim()
+                        );
 
                 if (cols.length < 4) return;
 
-                const level    = (cols[0] || '').toLowerCase();
-                const courseId = (cols[1] || '').toLowerCase();
-                const subject  = cols[2] || '';
-                const status   = (cols[3] || '').toLowerCase();
-                const day      = cols[4] || '';
-                const hour     = cols[5] || '';
-                const note     = cols[6] || '';
-                const date     = cols[7] || '';
+                const level =
+                    (cols[0] || '').toLowerCase();
 
-                if (level !== CURRENT_LEVEL.toLowerCase()) return;
+                const courseId =
+                    (cols[1] || '').toLowerCase();
 
-                const combinedNote = [note, date].filter(Boolean).join(' · ');
+                const subject =
+                    cols[2] || '';
 
-                // A) Si un jour ET une heure sont spécifiés dans Sheets
+                const status =
+                    (cols[3] || '').toLowerCase();
+
+                const day =
+                    cols[4] || '';
+
+                const hour =
+                    cols[5] || '';
+
+                const note =
+                    cols[6] || '';
+
+                const date =
+                    cols[7] || '';
+
+                if (
+                    level !==
+                    CURRENT_LEVEL.toLowerCase()
+                ) {
+                    return;
+                }
+
+                const combinedNote =
+                    [note, date]
+                        .filter(Boolean)
+                        .join(' · ');
+
+                // A) Jour + heure
+
                 if (day && hour) {
-                    const blocks = document.querySelectorAll(`.course-block[data-course-id="${courseId}"]`);
 
-                    // Rattrapage/Supplémentaire OU Matière absente du HTML fixe (ex: Anglais)
-                    if (status.includes('rattrap') || status.includes('suppl') || blocks.length === 0) {
-                        placeDynamicCourseBlock(courseId, subject, day, hour, status, combinedNote);
-                    } 
-                    else if (status.includes('report') || status.includes('postpon')) {
+                    const blocks =
+                        document.querySelectorAll(
+                            `.course-block[data-course-id="${courseId}"]`
+                        );
+
+                    // Rattrapage / Supplémentaire
+                    // ou matière absente du HTML
+
+                    if (
+                        status.includes('rattrap') ||
+                        status.includes('suppl') ||
+                        blocks.length === 0
+                    ) {
+
+                        placeDynamicCourseBlock(
+                            courseId,
+                            subject,
+                            day,
+                            hour,
+                            status,
+                            combinedNote
+                        );
+
+                    } else if (
+                        status.includes('report') ||
+                        status.includes('postpon')
+                    ) {
+
                         blocks.forEach(block => {
-                            block.classList.add('is-postponed');
-                            const noteEl = block.querySelector('.cb-custom-note');
+
+                            block.classList.add(
+                                'is-postponed'
+                            );
+
+                            const noteEl =
+                                block.querySelector(
+                                    '.cb-custom-note'
+                                );
+
                             if (noteEl) {
-                                noteEl.textContent = '⏳ ' + (combinedNote || `Reporté au ${day} ${hour}`);
-                                noteEl.style.display = 'block';
+
+                                noteEl.textContent =
+                                    '⏳ ' +
+                                    (
+                                        combinedNote ||
+                                        `Reporté au ${day} ${hour}`
+                                    );
+
+                                noteEl.style.display =
+                                    'block';
                             }
+
                         });
                     }
-                } 
-                // B) Si pas de jour/heure spécifiés -> Modifie le bloc fixe existant
-                else {
-                    const blocks = document.querySelectorAll(`.course-block[data-course-id="${courseId}"]`);
-                    blocks.forEach(block => {
-                        block.classList.remove('is-cancelled', 'is-postponed', 'is-rattrapage');
-                        const noteEl = block.querySelector('.cb-custom-note');
 
-                        if (status.includes('annul') || status.includes('cancel')) {
-                            block.classList.add('is-cancelled');
-                            if (noteEl && combinedNote) {
-                                noteEl.textContent = '❌ ' + combinedNote;
-                                noteEl.style.display = 'block';
+                }
+
+                // B) Pas de jour/heure
+                // Modification du bloc fixe
+
+                else {
+
+                    const blocks =
+                        document.querySelectorAll(
+                            `.course-block[data-course-id="${courseId}"]`
+                        );
+
+                    blocks.forEach(block => {
+
+                        block.classList.remove(
+                            'is-cancelled',
+                            'is-postponed',
+                            'is-rattrapage'
+                        );
+
+                        const noteEl =
+                            block.querySelector(
+                                '.cb-custom-note'
+                            );
+
+                        if (
+                            status.includes('annul') ||
+                            status.includes('cancel')
+                        ) {
+
+                            block.classList.add(
+                                'is-cancelled'
+                            );
+
+                            if (
+                                noteEl &&
+                                combinedNote
+                            ) {
+
+                                noteEl.textContent =
+                                    '❌ ' +
+                                    combinedNote;
+
+                                noteEl.style.display =
+                                    'block';
                             }
-                        } else if (status.includes('report') || status.includes('postpon')) {
-                            block.classList.add('is-postponed');
-                            if (noteEl && combinedNote) {
-                                noteEl.textContent = '⏳ ' + combinedNote;
-                                noteEl.style.display = 'block';
+
+                        } else if (
+                            status.includes('report') ||
+                            status.includes('postpon')
+                        ) {
+
+                            block.classList.add(
+                                'is-postponed'
+                            );
+
+                            if (
+                                noteEl &&
+                                combinedNote
+                            ) {
+
+                                noteEl.textContent =
+                                    '⏳ ' +
+                                    combinedNote;
+
+                                noteEl.style.display =
+                                    'block';
                             }
+
                         } else {
-                            if (noteEl && combinedNote) {
-                                noteEl.textContent = '📌 ' + combinedNote;
-                                noteEl.style.display = 'block';
+
+                            if (
+                                noteEl &&
+                                combinedNote
+                            ) {
+
+                                noteEl.textContent =
+                                    '📌 ' +
+                                    combinedNote;
+
+                                noteEl.style.display =
+                                    'block';
                             }
                         }
+
                     });
                 }
+
             });
+
         } catch (e) {
-            console.warn('Sheets sync error:', e);
+
+            console.warn(
+                'Sheets sync error:',
+                e
+            );
         }
     }
 
     fetchGoogleSheetsStatuses();
 
-    // Export PDF
+    // =========================================================
+    // EXPORT PDF
+    // =========================================================
+
     async function downloadPDF() {
-        const btn = document.getElementById('downloadBtn');
-        btn.classList.add('is-loading');
-        btn.classList.remove('is-success');
+
+        const btn =
+            document.getElementById(
+                'downloadBtn'
+            );
+
+        btn.classList.add(
+            'is-loading'
+        );
+
+        btn.classList.remove(
+            'is-success'
+        );
 
         try {
-            const clone = document.getElementById('planningSection').cloneNode(true);
-            const hint = clone.querySelector('.scroll-hint');
-            if (hint) hint.remove();
 
-            const header = document.createElement('div');
+            const clone =
+                document
+                    .getElementById(
+                        'planningSection'
+                    )
+                    .cloneNode(true);
+
+            const hint =
+                clone.querySelector(
+                    '.scroll-hint'
+                );
+
+            if (hint) {
+                hint.remove();
+            }
+
+            const header =
+                document.createElement('div');
+
             header.innerHTML = `
-                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;padding-bottom:14px;border-bottom:3px solid #e2e8f0;font-family:Inter,sans-serif">
-                    <div style="display:flex;align-items:center;gap:14px">
-                        <div style="width:42px;height:42px;background:#4f46e5;color:#fff;border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:16px">BFT</div>
+
+                <div
+                    style="
+                        display:flex;
+                        align-items:center;
+                        justify-content:space-between;
+                        margin-bottom:18px;
+                        padding-bottom:14px;
+                        border-bottom:3px solid #e2e8f0;
+                        font-family:Inter,sans-serif
+                    "
+                >
+
+                    <div
+                        style="
+                            display:flex;
+                            align-items:center;
+                            gap:14px
+                        "
+                    >
+
+                        <div
+                            style="
+                                width:42px;
+                                height:42px;
+                                background:#4f46e5;
+                                color:#fff;
+                                border-radius:12px;
+                                display:flex;
+                                align-items:center;
+                                justify-content:center;
+                                font-weight:900;
+                                font-size:16px
+                            "
+                        >
+                            BFT
+                        </div>
+
                         <div>
-                            <div style="font-size:18px;font-weight:900;color:#0f172a;letter-spacing:-0.5px">BFT Education Group</div>
-                            <div style="font-size:11px;color:#64748b;font-weight:600;margin-top:2px">Emploi du temps · 2026-2027</div>
+
+                            <div
+                                style="
+                                    font-size:18px;
+                                    font-weight:900;
+                                    color:#0f172a;
+                                    letter-spacing:-0.5px
+                                "
+                            >
+                                BFT Education Group
+                            </div>
+
+                            <div
+                                style="
+                                    font-size:11px;
+                                    color:#64748b;
+                                    font-weight:600;
+                                    margin-top:2px
+                                "
+                            >
+                                Emploi du temps · 2026-2027
+                            </div>
+
                         </div>
                     </div>
-                    <div style="background:#eef2ff;color:#4f46e5;padding:7px 14px;border-radius:999px;font-size:12px;font-weight:800">Terminale Générale</div>
+
+                    <div
+                        style="
+                            background:#eef2ff;
+                            color:#4f46e5;
+                            padding:7px 14px;
+                            border-radius:999px;
+                            font-size:12px;
+                            font-weight:800
+                        "
+                    >
+                        Terminale Générale
+                    </div>
+
                 </div>
             `;
 
-            const wrap = document.createElement('div');
-            wrap.style.cssText = 'position:absolute;left:-9999px;top:0;width:1120px;background:#fff;padding:28px';
-            wrap.innerHTML = `<style>
-                *{animation:none!important;transition:none!important;transform:none!important;box-shadow:none!important}
-                .table-scroll{overflow:visible!important;width:100%!important}
-                .schedule{width:100%!important;min-width:100%!important;border-spacing:5px!important}
-                .planning-wrapper{border:none!important;border-radius:0!important;padding:0!important;background:transparent!important;box-shadow:none!important}
-                .course-block{border:1px solid rgba(0,0,0,0.06)!important}
-            </style>`;
+            const wrap =
+                document.createElement('div');
+
+            wrap.style.cssText =
+                `
+                    position:absolute;
+                    left:-9999px;
+                    top:0;
+                    width:1120px;
+                    background:#fff;
+                    padding:28px
+                `;
+
+            wrap.innerHTML = `
+
+                <style>
+
+                    * {
+                        animation:none!important;
+                        transition:none!important;
+                        transform:none!important;
+                        box-shadow:none!important
+                    }
+
+                    .table-scroll {
+                        overflow:visible!important;
+                        width:100%!important
+                    }
+
+                    .schedule {
+                        width:100%!important;
+                        min-width:100%!important;
+                        border-spacing:5px!important
+                    }
+
+                    .planning-wrapper {
+                        border:none!important;
+                        border-radius:0!important;
+                        padding:0!important;
+                        background:transparent!important;
+                        box-shadow:none!important
+                    }
+
+                    .course-block {
+                        border:1px solid rgba(0,0,0,0.06)!important
+                    }
+
+                </style>
+            `;
+
             wrap.appendChild(header);
             wrap.appendChild(clone);
+
             document.body.appendChild(wrap);
 
-            const canvas = await html2canvas(wrap, {
-                scale: 1.5,
-                backgroundColor: '#ffffff',
-                logging: false,
-                useCORS: true
-            });
+            const canvas =
+                await html2canvas(
+                    wrap,
+                    {
+                        scale: 1.5,
+                        backgroundColor: '#ffffff',
+                        logging: false,
+                        useCORS: true
+                    }
+                );
+
             document.body.removeChild(wrap);
 
-            const { jsPDF } = window.jspdf;
-            const pdf = new jsPDF({ orientation: 'landscape', unit: 'mm', format: 'a4', compress: true });
-            const pw = pdf.internal.pageSize.getWidth();
-            const ph = pdf.internal.pageSize.getHeight();
+            const { jsPDF } =
+                window.jspdf;
+
+            const pdf =
+                new jsPDF({
+                    orientation: 'landscape',
+                    unit: 'mm',
+                    format: 'a4',
+                    compress: true
+                });
+
+            const pw =
+                pdf.internal.pageSize.getWidth();
+
+            const ph =
+                pdf.internal.pageSize.getHeight();
+
             const m = 5;
 
-            let w = pw - m * 2;
-            let h = w / (canvas.width / canvas.height);
+            let w =
+                pw - m * 2;
+
+            let h =
+                w /
+                (
+                    canvas.width /
+                    canvas.height
+                );
+
             if (h > ph - m * 2) {
-                h = ph - m * 2;
-                w = h * (canvas.width / canvas.height);
+
+                h =
+                    ph - m * 2;
+
+                w =
+                    h *
+                    (
+                        canvas.width /
+                        canvas.height
+                    );
             }
 
-            pdf.addImage(canvas.toDataURL('image/jpeg', 0.93), 'JPEG', (pw - w) / 2, (ph - h) / 2, w, h);
-            pdf.save('Emploi-du-temps-Terminale-Generale.pdf');
+            pdf.addImage(
+                canvas.toDataURL(
+                    'image/jpeg',
+                    0.93
+                ),
+                'JPEG',
+                (pw - w) / 2,
+                (ph - h) / 2,
+                w,
+                h
+            );
 
-            btn.classList.remove('is-loading');
-            btn.classList.add('is-success');
-            setTimeout(() => btn.classList.remove('is-success'), 2000);
+            pdf.save(
+                'Emploi-du-temps-Terminale-Generale.pdf'
+            );
+
+            btn.classList.remove(
+                'is-loading'
+            );
+
+            btn.classList.add(
+                'is-success'
+            );
+
+            setTimeout(
+                () =>
+                    btn.classList.remove(
+                        'is-success'
+                    ),
+                2000
+            );
+
         } catch (err) {
+
             console.error(err);
-            btn.classList.remove('is-loading');
-            alert('Erreur PDF. Réessayez ou utilisez Ctrl+P.');
+
+            btn.classList.remove(
+                'is-loading'
+            );
+
+            alert(
+                'Erreur PDF. Réessayez ou utilisez Ctrl+P.'
+            );
         }
     }
+
 </script>
+
 </body>
 </html>
